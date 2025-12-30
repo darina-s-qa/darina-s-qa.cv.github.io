@@ -1,0 +1,143 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+:root {
+  --text-color: #f0f0f0;
+  --gray-color: rgba(240, 240, 240, 0.6);
+  --background-color: #222021;
+}
+
+body {
+  padding: 10vw 3.333vw;
+  padding-bottom: 13.333vw;
+  font-family: "Courier New", serif;
+  font-weight: 400;
+  letter-spacing: -0.1vw;
+  background-color: var(--background-color);
+  color: white;
+
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    color: #fb6f92;
+    padding: 15px 0;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee-animation 15s linear infinite;
+}
+
+.marquee-content span {
+    display: inline-block;
+    font-size: 3vh;
+}
+
+@keyframes marquee-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.name {
+  font-size: 12.778vw;
+  line-height: 100%;
+}
+
+.block {
+  margin-top: 13.333vw;
+}
+
+.block-title {
+  color: rgba(240, 240, 240, 0.6);
+  line-height: 5.208vw;
+  font-size: 4.444vw;
+  margin-bottom: 3.333vw;
+}
+
+.entry {
+  line-height: 7.814vw;
+  font-size: 6.667vw;
+  margin-bottom: 1.667vw;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  border-bottom: 1vh solid #fb6f92;
+}
+
+/* 
+Медиа query для планшетов, срабатывает, когда минимальный размер окна достигает 1024px
+*/
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 4.883vw;
+    padding-bottom: 9.375vw;
+  }
+
+  .name {
+    font-size: 9.375vw;
+  }
+
+  .block {
+    margin-top: 9.375vw;
+  }
+
+  .block-title {
+    line-height: 3.434vw;
+    font-size: 2.93vw;
+    margin-bottom: 2.344vw;
+  }
+
+  .entry {
+    line-height: 8.24vw;
+    font-size: 7.031vw;
+    margin-bottom: 0;
+  }
+}
+
+/* Медиа query для десктопов, срабатывает при достижении 1440px  */
+
+@media screen and (min-width: 1440px) {
+  body {
+    padding: 3.472vw;
+    padding-bottom: 8.333vw;
+  }
+
+  .name {
+    font-size: 10vw;
+    margin-bottom: 1.667vw;
+  }
+
+  .block {
+    margin-top: 8.333vw;
+  }
+
+  .block-title {
+    line-height: 3.906vw;
+    font-size: 3.333vw;
+    margin-bottom: 2.5vw;
+  }
+
+  .entry {
+    line-height: 7.813vw;
+    font-size: 6.667vw;
+  }
+}
